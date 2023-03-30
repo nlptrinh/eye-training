@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="frag"
+            type="kr.ac.unist.fragment.survey.FragSurvey1" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_above="@+id/tv_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="@dimen/intro_top_margin"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/rgb_333333"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="left"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="5.3sp"
+                    android:text="사용자 등록이 완료되었습니다."
+                    android:textColor="@color/rgb_333333"
+                    android:textSize="24dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="5.3sp"
+                    android:text="모든 사용자는 초기 퀴즈에 참가해야합니다\n\n
+아래의 세가지 글자를 기억해주세요. 첫번째 퀴즈와 마지막 퀴즈에서 기억한 글자를 물어볼 것입니다."
+                    android:textColor="@color/rgb_333333"
+                    android:textSize="25dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="5.3sp"
+                    android:text="나무, 자동차, 모자"
+                    android:textColor="#333333"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="left"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="5.3sp"
+                    android:text="다 외우셨다면 버튼을 눌러 다음 화면으로 넘어갑니다."
+                    android:textColor="@color/rgb_333333"
+                    android:textSize="25dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/border_corner_log_in"
+            android:gravity="center"
+            android:onClick="@{frag::clickNext}"
+            android:text="퀴즈 시작"
+            android:textColor="@color/rgb_333333"
+            android:textSize="20dp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+</layout>

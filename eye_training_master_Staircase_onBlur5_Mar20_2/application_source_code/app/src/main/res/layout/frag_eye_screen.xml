@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="frag"
+            type="kr.ac.unist.fragment.eye.FragEyeScreen" />
+
+        <variable
+            name="model"
+            type="kr.ac.unist.fragment.eye.EyeScreenViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:visibility="@{model.resultTextVisible}"
+            android:id="@+id/tv_msg_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="28dp"
+            android:textColor="@color/rgb_333333"
+            android:lineSpacingExtra="8sp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text="@{model.resultText}"
+            />
+
+        <kr.ac.unist.custom.EyeScreenView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rotation="90"
+            android:visibility="@{model.eyeScreenViewVisible}"
+            android:id="@+id/esv_screen"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="8sp"
+            android:text="@{model.screenTitleText}"
+            android:visibility="@{model.screenTitleTextVisible}"
+            tools:text="시력 훈련"
+            android:textColor="@color/rgb_333333"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{model.introVisible}"
+            android:layout_gravity="center"
+            android:layout_marginLeft="62dp"
+            android:layout_marginRight="62dp"
+            android:background="@color/white"
+            card_view:cardCornerRadius="4dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_start_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:letterSpacing="0.01"
+                            android:lineSpacingExtra="5.3sp"
+                            android:text="@{model.titleText}"
+                            android:textColor="@color/rgb_de000000"
+                            android:textSize="13dp"
+                            tools:text="@string/start_train_title"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tv_start_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="left"
+                            android:letterSpacing="0.01"
+                            android:lineSpacingExtra="5.3sp"
+                            android:text="@{model.startMessageText}"
+                            tools:text="@string/start_test_message"
+                            android:textColor="@color/rgb_99000000"
+                            android:textSize="13dp"
+                            android:textStyle="normal" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="250dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="center"
+                            android:visibility="@{model.screenTestGuideVisible}"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_test_guide"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll_train"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:visibility="@{model.trainVisible}"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_eye_train_2" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:letterSpacing="0.01"
+                                android:lineSpacingExtra="6.7sp"
+                                android:text="경계가 뚜렷할 때"
+                                android:textColor="@color/rgb_de000000"
+                                android:textSize="13dp"
+                                android:textStyle="normal" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_arrow_left" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_eye_train_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:letterSpacing="0.01"
+                                android:lineSpacingExtra="6.7sp"
+                                android:text="경계가 흐릿할 때"
+                                android:textColor="@color/rgb_de000000"
+                                android:textSize="13dp"
+                                android:textStyle="normal" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_arrow_right" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_close"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.09"
+                        android:lineSpacingExtra="1.3sp"
+                        android:onClick="@{frag::clickClose}"
+                        android:text="돌아가기"
+                        android:textColor="@color/rgb_6200ee"
+                        android:textSize="13dp"
+                        android:gravity="center"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tv_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.09"
+                        android:lineSpacingExtra="1.3sp"
+                        android:onClick="@{frag::clickStart}"
+                        android:text="@{model.startBtnText}"
+                        tools:text="@string/start_train_start"
+                        android:gravity="center"
+                        android:textColor="@color/rgb_6200ee"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_main"
+    app:startDestination="@id/fragMain">
+    <fragment
+        android:id="@+id/fragMain"
+        android:name="kr.ac.unist.fragment.FragMain"
+        android:label="FragMain"
+        tools:layout="@layout/frag_main">
+        <action
+            android:id="@+id/action_fragMain_to_fragIntro"
+            app:destination="@id/fragIntro"
+            app:popUpTo="@id/fragMain"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_fragMain_to_fragProfile"
+            app:destination="@id/fragProfile" />
+        <action
+            android:id="@+id/action_fragMain_to_fragSetting"
+            app:destination="@id/fragSetting" />
+        <action
+            android:id="@+id/action_fragMain_to_fragHistory"
+            app:destination="@id/fragHistory" />
+        <action
+            android:id="@+id/action_fragMain_to_fragSurvey1"
+            app:destination="@id/fragSurvey1" />
+        <action
+            android:id="@+id/action_fragMain_to_fragEyeScreen"
+            app:destination="@id/fragEyeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragIntro"
+        android:name="kr.ac.unist.fragment.FragIntro"
+        android:label="FragIntro"
+        tools:layout="@layout/frag_intro">
+        <action
+            android:id="@+id/action_fragIntro_to_fragLogin"
+            app:destination="@id/fragLogin" />
+        <action
+            android:id="@+id/action_fragIntro_to_fragSignUp1"
+            app:destination="@id/fragSignUp1" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragLogin"
+        android:name="kr.ac.unist.fragment.login.FragLogin"
+        android:label="FragLogin"
+        tools:layout="@layout/frag_login">
+        <action
+            android:id="@+id/action_fragLogin_to_fragForgetPasswrod"
+            app:destination="@id/fragForgetPassword" />
+        <action
+            android:id="@+id/action_fragLogin_to_fragMain"
+            app:popUpTo="@id/fragIntro"
+            app:popUpToInclusive="true"
+            app:destination="@id/fragMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragForgetPassword"
+        android:name="kr.ac.unist.fragment.login.FragForgetPassword"
+        android:label="FragForgetPasswrod"
+        tools:layout="@layout/frag_forget_password" />
+    <fragment
+        android:id="@+id/fragSignUp1"
+        android:name="kr.ac.unist.fragment.signup.FragSignUp1"
+        android:label="FragSignUp1"
+        tools:layout="@layout/frag_sign_up_1">
+        <action
+            android:id="@+id/action_fragSignUp1_to_fragSignUp2"
+            app:destination="@id/fragSignUp2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSignUp2"
+        android:name="kr.ac.unist.fragment.signup.FragSignUp2"
+        android:label="FragSignUp2"
+        tools:layout="@layout/frag_sign_up_2">
+        <action
+            android:id="@+id/action_fragSignUp2_to_fragSignUp3"
+            app:destination="@id/fragSignUp3" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragSignUp3"
+        android:name="kr.ac.unist.fragment.signup.FragSignUp3"
+        android:label="FragSignUp3"
+        tools:layout="@layout/frag_sign_up_3" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <argument
+            android:name="birthday"
+            app:argType="string" />
+        <argument
+            android:name="sex"
+            app:argType="string" />
+        <argument android:name="eyeSurgery" />
+        <action
+            android:id="@+id/action_fragSignUp3_to_fragSurvey1"
+            app:destination="@id/fragSurvey1"
+            app:popUpTo="@id/fragSignUp1"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSurvey1"
+        tools:layout="@layout/frag_survey_1"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey1"
+        android:label="FragSurvey1" >
+        <action
+            android:id="@+id/action_fragSurvey1_to_fragSurvey2"
+            app:destination="@id/fragSurvey2" />
+        <action
+            app:popUpTo="@id/fragMain"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_fragSurvey1_to_fragIntro"
+            app:destination="@id/fragIntro" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSurvey2"
+        tools:layout="@layout/frag_survey_2"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey2"
+        android:label="FragSurvey2" >
+        <action
+            android:id="@+id/action_fragSurvey2_to_fragSurvey3"
+            app:destination="@id/fragSurvey3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSurvey3"
+        tools:layout="@layout/frag_survey_3"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey3"
+        android:label="FragSurvey3" >
+        <action
+            android:id="@+id/action_fragSurvey3_to_fragSurvey4"
+            app:destination="@id/fragSurvey4" />
+        <argument android:name="answer2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSurvey4"
+        tools:layout="@layout/frag_survey_4"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey4"
+        android:label="FragSurvey4" >
+        <action
+            android:id="@+id/action_fragSurvey4_to_fragSurvey5"
+            app:destination="@id/fragSurvey5" />
+        <argument
+            android:name="answer3"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSurvey5"
+        tools:layout="@layout/frag_survey_5"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey5"
+        android:label="FragSurvey5" >
+        <action
+            android:id="@+id/action_fragSurvey5_to_fragSurvey6"
+            app:destination="@id/fragSurvey6" />
+        <argument
+            android:name="answer4"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSurvey6"
+        tools:layout="@layout/frag_survey_6"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey6"
+        android:label="FragSurvey6" >
+        <action
+            android:id="@+id/action_fragSurvey6_to_fragSurvey7"
+            app:destination="@id/fragSurvey7" />
+        <argument
+            android:name="answer5"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSurvey7"
+        tools:layout="@layout/frag_survey_7"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey7"
+        android:label="FragSurvey7" >
+        <action
+            android:id="@+id/action_fragSurvey7_to_fragSurvey8"
+            app:destination="@id/fragSurvey8" />
+        <argument
+            android:name="answer6"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSurvey8"
+        tools:layout="@layout/frag_survey_8"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey8"
+        android:label="FragSurvey8" >
+        <action
+            android:id="@+id/action_fragSurvey8_to_fragSurvey9"
+            app:destination="@id/fragSurvey9" />
+        <argument
+            android:name="answer7"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSurvey9"
+        tools:layout="@layout/frag_survey_9"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey9"
+        android:label="FragSurvey9" >
+        <action
+            android:id="@+id/action_fragSurvey9_to_fragSurvey10"
+            app:destination="@id/fragSurvey10" />
+        <argument
+            android:name="answer8"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSurvey10"
+        tools:layout="@layout/frag_survey_10"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey10"
+        android:label="FragSurvey10" >
+        <action
+            android:id="@+id/action_fragSurvey10_to_fragSurvey11"
+            app:destination="@id/fragSurvey11" />
+        <argument
+            android:name="answer9"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/frag_survey_11"
+        android:id="@+id/fragSurvey11"
+        android:name="kr.ac.unist.fragment.survey.FragSurvey11"
+        android:label="FragSurvey11" >
+        <action
+            android:id="@+id/action_fragSurvey11_to_fragMain"
+            app:destination="@id/fragMain"
+            app:popUpTo="@id/fragSurvey1"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="answer10"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragProfile"
+        tools:layout="@layout/frag_profile"
+        android:name="kr.ac.unist.fragment.setting.FragProfile"
+        android:label="FragProfile" />
+    <fragment
+        tools:layout="@layout/frag_setting"
+        android:id="@+id/fragSetting"
+        android:name="kr.ac.unist.fragment.setting.FragSetting"
+        android:label="FragSetting" >
+
+        <action
+            android:id="@+id/action_fragSetting_to_fragIntro"
+            app:destination="@+id/fragIntro"
+            app:popUpTo="@id/fragMain"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingBreakTime"
+        tools:layout="@layout/dialog_setting_break_time"
+        android:name="kr.ac.unist.dialog.SettingBreakTime"
+        android:label="SettingBreakTime" />
+    <fragment
+        android:id="@+id/settingVolumn"
+        tools:layout="@layout/dialog_setting_volumn"
+        android:name="kr.ac.unist.dialog.SettingVolume"
+        android:label="SettingVolumn" />
+    <fragment
+        android:id="@+id/settingBle"
+        tools:layout="@layout/dialog_setting_ble"
+        android:name="kr.ac.unist.dialog.SettingBle"
+        android:label="SettingBle" />
+
+    <dialog
+        tools:layout="@layout/dialog_setting_db_backup"
+        android:id="@+id/settingDbBackup"
+        android:name="kr.ac.unist.dialog.SettingDbBackup"
+        android:label="SettingDbBackup" />
+    <fragment
+        tools:layout="@layout/frag_history"
+        android:id="@+id/fragHistory"
+        android:name="kr.ac.unist.fragment.FragHistory"
+        android:label="FragHistory" />
+    <fragment
+        android:id="@+id/fragEyeScreen"
+        tools:layout="@layout/frag_eye_screen"
+        android:name="kr.ac.unist.fragment.eye.FragEyeScreen"
+        android:label="FragEyeScreen" >
+        <argument
+            android:name="screenMode"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

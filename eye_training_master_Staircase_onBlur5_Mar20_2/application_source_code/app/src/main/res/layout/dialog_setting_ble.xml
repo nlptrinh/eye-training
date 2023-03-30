@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="dialog"
+            type="kr.ac.unist.dialog.SettingBle" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/dialog_size_width"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="5.3sp"
+                android:text="BLE 장치 설정"
+                android:textColor="@color/rgb_de000000"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="5.3sp"
+                android:text="BLE 장치의 전원을 켜주세요."
+                android:textColor="@color/rgb_99000000"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <!-- 장치 검색 중 -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_find_ble"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="5.3sp"
+                    android:text="장치 검색 중.."
+                    android:textColor="@color/rgb_99000000"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/iv_loading"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_icon_awesome_spinner"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!-- 장치 연결 완료 -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_connect_ble"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_icon_awesome_check"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:letterSpacing="0.01"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="5.3sp"
+                    android:layout_marginLeft="15dp"
+                    android:text="장치가 연결되었습니다."
+                    android:textColor="@color/rgb_99000000"
+                    android:textSize="13dp"
+                    android:textStyle="normal" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!-- 장치를 찾을 수 없습니다. -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_fail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:letterSpacing="0.01"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="5.3sp"
+                    android:text="아래 버튼을 눌러 문제 상황 해결 방법을 알아보세요."
+                    android:textColor="@color/rgb_99000000"
+                    android:textSize="13dp"
+                    android:textStyle="normal" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:letterSpacing="0.09"
+                    android:visibility="gone"
+                    android:lineSpacingExtra="1.3sp"
+                    android:onClick="@{dialog::clickClose}"
+                    android:text="돌아가기"
+                    android:textColor="@color/rgb_6200ee"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/tv_complate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:letterSpacing="0.09"
+                    android:visibility="gone"
+                    android:lineSpacingExtra="1.3sp"
+                    android:onClick="@{dialog::clickComplate}"
+                    android:text="확인"
+                    android:textColor="@color/rgb_6200ee"
+                    android:textSize="13dp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{dialog::clickLink}"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:letterSpacing="0.09"
+                        android:lineSpacingExtra="1.3sp"
+                        android:text="로그 리포트 및 장치 안내"
+                        android:textColor="@color/rgb_6200ee"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_icon_material_open_in_new"
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

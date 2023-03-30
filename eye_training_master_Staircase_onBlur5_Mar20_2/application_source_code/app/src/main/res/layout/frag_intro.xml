@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="frag"
+            type="kr.ac.unist.fragment.FragIntro" />
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/rgb_333333"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:text="@string/app_name"/>
+
+            <TextView
+                android:layout_marginTop="100dp"
+                android:background="@drawable/border_corner_sign_up"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:textColor="@color/rgb_ffffff"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:onClick="@{frag::clickSignUp}"
+                android:textSize="23dp"
+                android:text="@string/sign_up"/>
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:onClick="@{frag::clickLoginButton}"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_corner_log_in"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:textColor="@color/rgb_333333"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:textSize="23dp"
+                android:text="@string/login"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

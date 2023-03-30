@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="frag"
+            type="kr.ac.unist.fragment.FragMain" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="@dimen/intro_top_margin"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/rgb_333333"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="right"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="5.3sp"
+                    android:text="김시력님"
+                    android:textColor="@color/rgb_333333"
+                    android:textSize="17dp"
+                    android:textStyle="normal" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="116dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_weight="1"
+                            android:background="@color/rgb_e6e6e6"
+                            android:onClick="@{frag::clickTrain}"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_icon_main_test"></ImageView>
+
+                            <TextView
+                                android:id="@+id/tv_train"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/rgb_61000000"
+                                android:gravity="center"
+                                android:text="시력 훈련"
+                                android:textColor="@color/rgb_eeeeee"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="116dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:background="@color/rgb_e6e6e6"
+                            android:onClick="@{frag::clickTest}"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_icon_main_train"></ImageView>
+
+                            <TextView
+                                android:id="@+id/tv_test"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/rgb_61000000"
+                                android:gravity="center"
+                                android:text="시력 진단"
+                                android:textColor="@color/rgb_eeeeee"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="116dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_weight="1"
+                            android:background="@color/rgb_e6e6e6"
+                            android:onClick="@{frag::clickHistory}"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_icon_main_graph"></ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/rgb_333333"
+                                android:gravity="center"
+                                android:text="훈련 기록"
+                                android:textColor="@color/rgb_eeeeee"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="116dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:background="@color/rgb_e6e6e6"
+                            android:onClick="@{frag::clickSetting}"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_icon_main_setting"></ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/rgb_333333"
+                                android:gravity="center"
+                                android:text="환경 설정"
+                                android:textColor="@color/rgb_eeeeee"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_connected_ble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/border_corner_connected"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="4sp"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="3dp"
+                android:text="BLE 장치 연결됨"
+                android:textColor="#6200ee"
+                android:textSize="13dp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:onClick="@{frag::clickProfile}"
+                android:padding="16dp"
+                android:src="@drawable/ic_icon_material_person_outline" />
+
+        </RelativeLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

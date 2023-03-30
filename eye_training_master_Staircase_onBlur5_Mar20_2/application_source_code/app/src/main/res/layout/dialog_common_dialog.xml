@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="dialog"
+            type="kr.ac.unist.dialog.CommonDialog" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/dialog_size_width"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="5.3sp"
+                android:text="TITLE"
+                android:textColor="@color/rgb_de000000"
+                android:textSize="13dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.01"
+                android:text="Content"
+                android:textColor="@color/rgb_99000000"
+                android:textSize="14dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:onClick="@{dialog::clickLeftButton}"
+                    android:id="@+id/tv_lefT_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:layout_marginTop="30dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="#6200ee"
+                    android:letterSpacing="0.09"
+                    android:lineSpacingExtra="1.3sp"
+                    android:text="LEFT BUTTON" />
+
+                <TextView
+                    android:id="@+id/tv_right_button"
+                    android:onClick="@{dialog::clickRightButton}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#6200ee"
+                    android:letterSpacing="0.09"
+                    android:lineSpacingExtra="1.3sp"
+                    android:text="RIGHT BUTTON" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

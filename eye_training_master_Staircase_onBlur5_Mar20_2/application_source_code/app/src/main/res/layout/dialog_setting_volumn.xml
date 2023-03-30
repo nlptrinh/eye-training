@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="dialog"
+            type="kr.ac.unist.dialog.SettingVolume" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/dialog_size_width"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="5.3sp"
+                android:text="알림음 크기 조절"
+                android:textColor="@color/rgb_de000000"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/rgb_24000000"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_icon_awesome_volume_up" />
+
+                <!-- 시크바 -->
+                <SeekBar
+                    android:id="@+id/sb_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:max="100"
+                    android:min="0"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/seekbar_volumn"
+                    android:thumb="@drawable/seekbar_volumn_thumb" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="30dp"
+                    android:letterSpacing="0.09"
+                    android:lineSpacingExtra="1.3sp"
+                    android:onClick="@{dialog::clickClose}"
+                    android:text="돌아가기"
+                    android:textColor="#6200ee"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="30dp"
+                    android:letterSpacing="0.09"
+                    android:lineSpacingExtra="1.3sp"
+                    android:onClick="@{dialog::clickSave}"
+                    android:text="설정하기"
+                    android:textColor="#6200ee"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

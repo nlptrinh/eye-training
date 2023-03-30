@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="frag"
+            type="kr.ac.unist.fragment.setting.FragSetting" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:onClick="@{frag::clickClose}"
+            android:padding="18dp"
+            android:src="@drawable/ic_close" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/iv_close">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="50dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="환경 설정"
+                        android:textColor="@color/rgb_333333"
+                        android:textSize="35dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:onClick="@{frag::clickBreakTime}"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.03"
+                            android:lineSpacingExtra="5.3sp"
+                            android:text="블록 사이 휴식 시간 설정"
+                            android:textColor="@color/rgb_de000000"
+                            android:textSize="16dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:letterSpacing="0.02"
+                            android:lineSpacingExtra="4sp"
+                            android:text="훈련 및 진단 블록 사이 휴식 시간을 설정합니다."
+                            android:textColor="@color/rgb_99000000"
+                            android:textSize="13dp"
+                            android:textStyle="normal" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:src="@color/rgb_1f000000"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:onClick="@{frag::clickVolumn}"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.03"
+                            android:lineSpacingExtra="5.3sp"
+                            android:text="알림음 크기 조절"
+                            android:textColor="@color/rgb_de000000"
+                            android:textSize="16dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:letterSpacing="0.02"
+                            android:lineSpacingExtra="4sp"
+                            android:text="훈련 및 진단시 피드백 소리의 크기를 조절합니다."
+                            android:textColor="@color/rgb_99000000"
+                            android:textSize="13dp"
+                            android:textStyle="normal" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:src="@color/rgb_1f000000"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.03"
+                            android:lineSpacingExtra="5.3sp"
+                            android:text="문제 리포트"
+                            android:textColor="@color/rgb_de000000"
+                            android:textSize="16dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:letterSpacing="0.02"
+                            android:lineSpacingExtra="4sp"
+                            android:text="문제가 발생했는데 해결이 안될 때 빠르게 도와드리겠습니다."
+                            android:textColor="@color/rgb_99000000"
+                            android:textSize="13dp"
+                            android:textStyle="normal" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:src="@color/rgb_1f000000"/>
+
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:src="@color/rgb_1f000000"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="@{frag::clickDbBackup}"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.03"
+                            android:lineSpacingExtra="5.3sp"
+                            android:text="로컬 DB 백업"
+                            android:textColor="@color/rgb_de000000"
+                            android:textSize="16dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:letterSpacing="0.02"
+                            android:lineSpacingExtra="4sp"
+                            android:text="사용자 데이터를 서버로 백업합니다. 관리자가 미리 안내한 경우에만 사용할 수 있습니다."
+                            android:textColor="@color/rgb_99000000"
+                            android:textSize="13dp"
+                            android:textStyle="normal" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:src="@color/rgb_1f000000"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="@{frag::clickDbClean}"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.03"
+                            android:lineSpacingExtra="5.3sp"
+                            android:text="로컬 DB 초기화"
+                            android:textColor="@color/rgb_de000000"
+                            android:textSize="16dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:letterSpacing="0.02"
+                            android:lineSpacingExtra="4sp"
+                            android:text="사용자 데이터를 초기화 합니다."
+                            android:textColor="@color/rgb_99000000"
+                            android:textSize="13dp"
+                            android:textStyle="normal" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:src="@color/rgb_1f000000"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="@{frag::clickLogout}"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.03"
+                            android:lineSpacingExtra="5.3sp"
+                            android:text="로그아웃"
+                            android:textColor="@color/rgb_de000000"
+                            android:textSize="16dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:letterSpacing="0.02"
+                            android:lineSpacingExtra="4sp"
+                            android:text="로그인 화면으로 이동합니다."
+                            android:textColor="@color/rgb_99000000"
+                            android:textSize="13dp"
+                            android:textStyle="normal" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:src="@color/rgb_1f000000"/>
+
+                </LinearLayout>
+
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

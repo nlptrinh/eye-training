@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">Eye Training</string>
+
+    <string name="msg_login_insert_id">아이디를 입력해주세요.</string>
+    <string name="msg_login_insert_password">비밀번호를 입력해주세요.</string>
+    <string name="msg_login_insert_not_found_user">아이디, 비밀번호를 확인해주세요.</string>
+
+    <string name="msg_sign_insert_id">아이디를 입력해주세요.</string>
+    <string name="msg_sign_insert_password">비밀번호를 입력해주세요.</string>
+    <string name="msg_sign_insert_password_re">비밀번호 확인을 위해, 한번 더 입력해주세요.</string>
+    <string name="msg_sign_insert_password_fail">비밀번호를 확인해주세요.</string>
+    <string name="msg_sign_insert_birthDay">생년월일을 입력해주세요.</string>
+    <string name="msg_sign_insert_found_id">이미 가입된 아이디입니다.</string>
+    <string name="msg_sign_insert_eye_surgery">안구 수술을 선택해주세요.</string>
+    <string name="msg_sign_insert_eye_sight">교정시력을 입력해주세요.</string>
+    <string name="msg_sign_insert_eye_list">착용하고 있는 안경 종류을 선택해주세요.</string>
+
+    <string name="msg_stting_ble_power_on">BLE 장치의 전원을 켜주세요.</string>
+    <string name="msg_stting_ble_find">BLE 장치를 찾았습니다.</string>
+
+    <string name="msg_main_ble_not_found">장치와 연결할 수 없습니다. 장치와 연결된 후 시력 훈련과 진단을 진행할 수 있습니다.</string>
+    <string name="msg_main_ble_solve">해결하기</string>
+    <string name="msg_main_ble_find">거리 측정 장치를 연결하고 있습니다...</string>
+    <string name="msg_main_ble_connect">거리 측정 장치와 연결되었습니다.</string>
+    <string name="msg_main_ble_no_supoort">해당 기기는 블루투스 지원을 하지 않습니다.</string>
+
+
+    <string name="msg_save_profile">저장되었습니다.</string>
+    <string name="msg_survey_select_answer">정답을 선택해주세요.</string>
+
+    <string name="user_name">%s님</string>
+
+    <string name="login">로그인</string>
+    <string name="sign_up">회원가입</string>
+    <string name="id">아이디</string>
+    <string name="password">비밀번호</string>
+    <string name="password_re">비밀번호 확인</string>
+    <string name="setting_new_password">새로운 비밀번호 설정</string>
+    <string name="reset_password">비밀번호 재설정</string>
+    <string name="forget_password">비밀번호를 잊어버리셨나요?</string>
+    <string name="account">계정</string>
+    <string name="next_1">다음 (1/3)</string>
+    <string name="next_2">다음 (2/3)</string>
+    <string name="next_3">다음 (3/3)</string>
+    <string name="infomation">정보</string>
+    <string name="sex">성별</string>
+    <string name="man">남성</string>
+    <string name="women">여성</string>
+    <string name="eye_surgery">안구 수술</string>
+    <string name="lasik">라식</string>
+    <string name="lasek">라섹</string>
+    <string name="none">없음</string>
+    <string name="etc">기타</string>
+    <string name="complete">완료</string>
+
+    <!-- quiz -->
+    <string name="quiz_1">이전에 제시되지 않았던 단어를 골라주세요.</string>
+    <string name="quiz_2">오늘의 날짜를 바르게 입력해주세요.</string>
+    <string name="quiz_3_1">100에서 7을 뺀 값을 보기에서 골라주세요.</string>
+    <string name="quiz_3_2">93에서 7을 뺀 값을 보기에서 골라주세요.</string>
+    <string name="quiz_3_3">86에서 7을 뺀 값을 보기에서 골라주세요.</string>
+    <string name="quiz_3_4">79에서 7을 뺀 값을 보기에서 골라주세요.</string>
+    <string name="quiz_3_5">72에서 7을 뺀 값을 보기에서 골라주세요.</string>
+    <string name="quiz_4">아래 물체의 이름은 무엇인가요?</string>
+    <string name="quiz_5">주어진 4 글자로 만든 올바른 단어를 골라주세요.</string>
+    <string name="quiz_6">주어진 순서 다음 나타날 숫자를 골라주세요.</string>
+    <string name="quiz_7">아래 사각형의 색깔은 무엇인가요?</string>
+    <string name="quiz_8">아래 글자들이 거꾸로 배열된 것을 골라주세요.</string>
+    <string name="quiz_9">아래 그림에서 빨간 막대가 기울어진 각도를 골라주세요.</string>
+    <string name="quiz_10">퀴즈를 시작할 때 제시되지 않았던 단어를 골라주세요.</string>
+
+    <!-- train -->
+    <string name="title_eye_train">시력 훈련</string>
+    <string name="title_eye_test">시력 진단</string>
+
+    <string name="start_train_title">시력 훈련을 시작합니다</string>
+    <string name="start_train_message">화면을 보고 그림의 밝은 부분과 어두운 부분의 경계가 또렷할 때는 왼쪽, 흐릿할 때는 오른쪽으로 슬라이드하세요.\n이 훈련의 목표는 높은 점수를 얻는 것입니다. 정답을 많이 맞히거나 화면을 가까이할수록 높은 점수를 얻을 수 있습니다.</string>
+    <string name="start_train_start">훈련 시작</string>
+
+    <string name="start_test_title">시력 진단을 시작합니다</string>
+    <string name="start_test_message">화면을 보고 그림의 C 글자가 열려있는 방향으로 슬라이드하세요.</string>
+    <string name="start_test_start">진단 시작</string>
+
+    <!-- train result message -->
+    <string name="msg_train_correct">정답입니다</string>
+    <string name="msg_train_incorrect">오답입니다</string>
+    <string name="msg_train_timeout">응답이 없습니다</string>
+
+    <!-- dilaog -->
+    <string name="msg_dialog_train_finish_one_block_title">%d 블럭을 끝냈습니다.</string>
+    <string name="msg_dialog_test_finish_one_block_title">시력진단 %d 블럭을 끝냈습니다.</string>
+    <string name="msg_dialog_train_finish_one_block_content">조금 더 화면을 가까이해보세요. 가까운 화면에서 훈련할수록 높은 점수를 얻습니다.</string>
+    <string name="msg_dialog_train_finish_one_block_left_button">돌아가기</string>
+    <string name="msg_dialog_train_finish_one_block_right_button">다음 블럭 시작</string>
+    <string name="msg_dialog_train_finish_one_session_title">모든 블럭을 끝냈습니다.</string>
+    <string name="msg_dialog_train_finish_one_session_content">내일 시력 훈련에도 참여해주세요!</string>
+    <string name="msg_dialog_test_finish_one_session_content">내일 시력 진단에도 참여해주세요!</string>
+    <string name="msg_dialog_train_finish_one_session_right_button">시력 훈련 마치기</string>
+    <string name="msg_dialog_test_finish_one_session_right_button">시력 진단 마치기</string>
+
+    <!-- error mesasge -->
+    <string name="msg_error_internet">인터넷 연결에 실패했습니다. 결과 기록을 위해 인터넷 상태를 확인하세요.</string>
+    <string name="msg_error_sensor_error">거리 측정 장치와 연결이 끊어졌습니다. 연결 후 훈련을 재개해주세요.</string>
+    <string name="msg_retry">연결시도</string>
+    <string name="msg_re_send">재시도</string>
+
+    <!-- BACKUP PERMISSION -->
+    <string name="msg_fail_backup_caus_permission">저장 권한을 허용해주세요.</string>
+
+    <!-- BREAK TIME -->
+    <string name="msg_break_time">  쉬는 시간이 %s초 남았습니다.</string>
+
+    <!-- Show Average Distance-->
+    <string name="avrg_distance">  Average distance %f mm.</string>
+
+    <!-- history -->
+    <string name="msg_no_chart_data">훈련 기록이 없습니다.</string>
+
+    <string name="msg_eye_test_result">%s님의 시력은 %.1f입니다.\n작은 숫자일 수 록 좋은 시력을 나타냅니다.\n이 점수는 훈련 기록에서 확인하실 수 있습니다.</string>
+
+    <string name="msg_db_clean">데이터가 초기화되었습니다.</string>
+</resources>
